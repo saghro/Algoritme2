@@ -1,0 +1,53 @@
+ALGORITHME	algo2_solition1
+
+VAR
+	T1 : array_of integer[];
+	T2 : array_of integer[];
+	x , som, n,i : integer;
+BEGIN
+        x:=0,som:=0;
+          // ************** saisir la taile de tableau ********** 
+        Write("donneez la taile de ces tableau");
+        Read(n);
+          // ************** ramplire tableau T1 ************ 
+         Write("donneez les valeux de tableau T1");
+            FOR i FROM 0 TO n-1 STEP 1 DO
+           read(T1[i]);
+
+             // ************** ramplire tableau T2************ 
+         Write("donneez les valeux de tableau T2");
+            FOR i FROM 0 TO n-1 STEP 1 DO
+           read(T1[i]);
+ // ************** chercher dans  le tableau T2************ 
+	FOR  i  FROM 0 TO n-1
+		FOR j FROM 0 TO n-1
+			IF ( T1[i] = T2[j] )
+				x :=  1;
+			END_if
+		END_FOR	
+            IF ( x = 0)
+			som :=  som + T1[i];
+		
+		END_IF
+	       x  := 0;
+		END_FOR	
+ // ************** chercher dans  le tableau T1************ 
+         FOR  i  FROM 0 TO  n-1
+		FOR j FROM 0 TO n-1
+			IF (T2[i] = T1[j] )
+				x :=  1;
+			END_if
+		END_FOR	
+
+		IF ( x = 0)
+			som :=  som + T2[i];
+			
+		END_IF
+           x  := 0;
+		
+	END_FOR
+
+	WRITE ( som );
+END
+     
+     

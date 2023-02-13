@@ -1,0 +1,49 @@
+ALGORITHME	algo2_solition2
+
+VAR
+	T1 : array_of integer[];
+	T2 : array_of integer[];
+      H :hash.table<integer,integer>;
+	 som, n,i: integer;
+BEGIN
+        x:=0,som:=0;
+
+          // ************** saisir la taile de tableau ********** 
+        Write("donneez la taile de ces tableau");
+        Read(n);
+
+          /* ************** ramplire tableau T1 ************
+         Write("donneez les valeux de tableau T1");
+            FOR i FROM 0 TO n-1 STEP 1 DO
+           read(T1[i]);
+
+             //  ************** ramplire tableau T2************ 
+         Write("donneez les valeux de tableau T2");
+            FOR i FROM 0 TO n-1 STEP 1 DO
+           read(T2[i]);
+
+          //  ************** ramplire H ************ 
+       FOR i FROM 0 TO n-1 STEP 1 DO
+            IF H.contains(T1[i]) THEN
+              H[T1[i]] := H[T1[i]] + 1;
+            ELSE
+             H[T1[i]] := 1;
+          END_IF
+      END_FOR
+      
+      FOR i FROM 0 TO n-1 STEP 1 DO
+            IF H.contains(T2[i]) THEN
+              H[T2[i]] := H[T2[i]] + 1;
+            ELSE
+             H[T2    [i]] := 1;
+          END_IF
+      END_FOR
+      som:=0;
+     FOR key IN H.keys() DO
+       IF H[key] = 1 THEN
+        sum := sum + key;
+      END_IF
+    END_FOR
+
+    Write(sum);
+END
